@@ -9,8 +9,19 @@
                 tools:context=".TimerActivity">
 
     <TextView
-            android:text="@string/hello_world"
+            android:text="@string/timer"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false" android:layout_alignParentTop="false"
+            android:layout_alignParentRight="false" android:layout_alignParentBottom="false"
+            android:layout_centerInParent="true" android:elegantTextHeight="false" android:textColor="@color/razer_green"
+            android:textIsSelectable="false" android:textSize="@dimen/abc_text_size_display_3_material"
+            android:id="@+id/lblTimer"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            android:id="@+id/btnStart" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+            android:layout_marginBottom="51dp"/>
 
 </RelativeLayout>
