@@ -1,4 +1,4 @@
-# Nabu TimeCop
+# Nabu TimeCop [![Build Status](https://travis-ci.org/bkimminich/NabuTimeCop.svg?branch=develop)](https://travis-ci.org/bkimminich/NabuTimeCop)
 
 > Multi-stage countdown timer for Android with optional notifications via the [Razer Nabu smartband](http://nabu.razerzone.com)
 
