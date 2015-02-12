@@ -2,9 +2,9 @@
 <resources>
 
     <string name="app_name">Nabu TimeCop</string>
-    <string name="timer">%s</string>
-    <string name="start">Start!</string>
-    <string name="pause">Pause</string>
+    <string name="start">Start</string>
+    <string name="paused">Paused</string>
     <string name="action_settings">Settings</string>
+    <string name="action_reset">Reset Timer</string>
 
 </resources>

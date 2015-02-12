@@ -2,16 +2,39 @@ package de.kimminich.nabutimecop.app;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.view.View;
+import android.widget.TextView;
 
 public class TimerActivity extends ActionBarActivity {
+
+    private static final String tag = "TimerActivity";
+
+    private boolean timerRunning = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
+
+        final TextView timer = (TextView) findViewById(R.id.timer);
+
+        timer.setOnClickListener(new TextView.OnClickListener() { // TODO Handle click on entire screen are instead
+
+            @Override
+            public void onClick(View view) {
+                if (timerRunning) {
+                    Log.i(tag, "Pausing timer.");
+                    timer.setText(R.string.paused);
+                } else {
+                    Log.i(tag, "Starting timer.");
+                    timer.setText("00:01"); // TODO Show value of countdown timer
+                }
+                timerRunning = !timerRunning;
+            }
+        });
     }
 
 
@@ -31,6 +54,12 @@ public class TimerActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            // TODO Go to timer settings activity
+            return true;
+        } else if (id == R.id.action_reset) {
+            final TextView timer = (TextView) findViewById(R.id.timer);
+            timerRunning = false;
+            timer.setText(R.string.start);
             return true;
         }
 
